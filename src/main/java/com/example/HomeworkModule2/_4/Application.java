@@ -33,15 +33,15 @@ public class Application implements CommandLineRunner {
 		note2.setContent("This is the content of the second note.");
 		noteService.add(note2);
 
-
+		
 		noteService.listAll().forEach(System.out::println);
 
-
+		
 		note1.setContent("Updated content of the first note.");
 		noteService.update(note1);
 		System.out.println(noteService.getById(note1.getId()));
 
-
+		
 		noteService.deleteById(note2.getId());
 		System.out.println(noteService.listAll());
 	}
